@@ -1,0 +1,36 @@
+{
+  "name": "APIRESTNodejs_MongoDBoMySQ",
+  "version": "1.0.0",
+  "description": "API REST Nodejs usando MongoDB o MySQ\r ¿Cómo crear una API REST Nodejs usando MongoDB o MySQL? \r construir una API Rest en Node desde cero aplicando paradigmas de la programación, utilizando rutas, modelos, controladores, cargas de archivo\r instalación de NODE en windows, visual Studio Code, Git, también trabajaremos base de datos de MONGO en Atlas\r Realizaremos pruebas de integración y rtesting con Jest\r Aprenderás a realizar (CI/CD) despliegue continuo e integración continua\r Aprenderás a crear API REST Node con TypeScript\r Documentar tu API con Swagger\r Validar datos en un API REST\r HGenarar JWT\r Probar datos con Postman",
+  "main": "inicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aAndres441/APIRESTNodejs_MongoDBoMySQ.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "MongoDBAtlas",
+    "MySql"
+  ],
+  "author": "andres <andrarias@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aAndres441/APIRESTNodejs_MongoDBoMySQ/issues"
+  },
+  "homepage": "https://github.com/aAndres441/APIRESTNodejs_MongoDBoMySQ#readme",
+  "dependencies": {
+    "@types/rimraf": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
