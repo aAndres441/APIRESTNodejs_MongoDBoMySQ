@@ -1,4 +1,4 @@
-# APIRESTNodejs_MongoDBoMySQ
+# ApiRest
 API REST Nodejs usando MongoDB o MySQ
 ¿Cómo crear una API REST Nodejs usando MongoDB o MySQL? 
 construir una API Rest en Node desde cero aplicando paradigmas de la programación, utilizando rutas, modelos, controladores, cargas de archivo
