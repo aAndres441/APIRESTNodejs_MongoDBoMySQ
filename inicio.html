@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- have different stylesheets for different media
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+    <link rel="stylesheet" type="tsxt/css" href="inicio.css">
+    <title>Node Express & Grid-Flex</title>
+</head>
+<body>
+    <h1>Inicio tabla</h1>
+    <table class="table table-responsive">
+        <tr>
+            <th>ID</th>
+            <th>json</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>{{titulo}}</td>
+            <td> <pre>{{titulo|json}}</pre> </td>
+            <td> <pre><h3>App status = {{promiseStatus | async}}</h3></pre> </td>
+            <td>{{FinDeSemana.91}}</td>
+        </tr>
+    </table>
+    <h2> Centar elementos </h2>
+        <div class="container">    
+          <div class="center1">
+            <div class="green"></div>
+          </div>
+          <div class="center2">
+            <div class="blue"></div>
+          </div>
+          <div class="center3">
+            <div class="yellow"></div>
+          </div>
+          <div class="center4">
+            <div class="grey"></div>
+          </div>
+          <div class="center5">
+            <div class="red"></div>
+          </div>
+        </div>
+        <h2> Hellow word </h2>
+        <p>Hover over the two divs below, to see the entire text.</p>
+        <div class="test">This is some long text that will not fit in the box.
+          verflow property has the following values:
+          visible - Default. The overflow is not clipped. The content renders outside the element's box
+          hidden - The overflow is clipped, and the rest of the content will be invisible
+          scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+          auto - Similar to scroll, but it adds scrollbars only when necessary
+        </div>
+        <br>
+        <div class="container">
+          <div class="green"></div>
+          <div class="blue"></div>
+          <div class="yellow"></div>
+          <button class="btn btn-primary">Back</button>
+        </div>
+        <div class="container2">
+          <header class="header">header</header>
+          <nav class="navbar navbar-right">navbar</nav>          
+          <main class="main">main</main>
+          <footer class="footer">footer</footer>
+          <aside class="aside">aside 👻 </aside>
+        </div>
+
+        <!-- ej cards rotadas -->
+        <div class="bodyMyCards">
+          <div class="polaroid rotate_right">
+            <img src="images\Cosmico.jpg" alt="cosmic" width="284" height="213">
+            <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+          </div>          
+          <div class="polaroid rotate_left">
+            <img src="images\paisajes.jpg" alt="paisajes"  width="284" height="213">
+            <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre, Italy.</p>
+          </div>          
+        </div>
+
+
+    <script src="inicio.ts"></script>
+</body>
+</html>

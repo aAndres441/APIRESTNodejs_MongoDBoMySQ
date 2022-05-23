@@ -1,0 +1,199 @@
+/*ALINEAR AL CENTRO DE 3 FORMAS*/
+
+*{ 
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  box-shadow: -1px 1px 7px 0px #73AD21 inset;
+}
+body{ 
+  font-family: 'Tangerine', serif;
+  font-size: 1.2em;
+  text-shadow: 4px 4px 4px #aaa;
+  /*para que ocupe como minimo toda la pantalla, o lo saco y veo
+  pereo acordarse de aplicarlo a html*/
+  min-height: 100%;/*auto*/
+}
+html{
+  height: 100%;
+}
+
+h2 {  color: blue;  }
+
+.test{
+  text-overflow:ellipsis;
+  text-align: right;
+  /* text-overflow: hidden; */
+  /* overflow: auto; */
+  /* overflow: scroll; */
+}
+.test:hover {
+  overflow: visible;
+}
+.container{
+  display:flex;
+  background-color:rgb(254, 244, 151);border:solid 2px red;
+  height: 500px;
+  width:auto;
+}
+
+.green, .blue, .yellow, .grey, .red{
+  border-radius:20%;
+  height:100px; width:50px;margin: 0; 
+  border: 3px solid #73AD21;}
+.center1, .center2, .center3, .center4, .center5{
+  padding: 0;  height: 200px; width:150px; /*  border: 3px solid green; */}
+
+/*con FLEX  espectacular*/
+.center1 {  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;/*este centra con padre container*/
+  background-color:rgb(14,121, 151);
+}
+.green{ background-color:green;  
+  /*position: absolute;*/ 
+}
+
+/*con GRID y center, alinea hijo al centro*/
+.center4{ 
+  display: grid;
+  place-items: center;
+  margin:auto;/*este centra con padre container*/
+  background-color:yellow;  
+}
+.grey{  background-color: grey;}
+
+  /*con GRID padre, hijo margin auto*/
+  .center3 { 
+    display: grid;  
+     margin:auto;/*este centra con padre container*/ background-color:#fe7997;}
+  .yellow{  background-color:yellow;
+    /*top:0;bottom:0;left:0;right:0;*/
+    margin:auto;
+  }
+  /*.center::after {  content: "faf";  clear: both;  display: table;
+  }*/   
+
+  /*con position:relative al padre y absolute al hijo;*/  
+.center2 {  
+  position:relative;
+  padding: 0;
+  background-color:rgb(254,121, 20);
+}
+.blue{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);background-color:blue;}
+
+/*con position: relative al padre y absolute al hijo;*/
+.center5 { 
+  position: relative;
+  margin:auto;}
+.red {
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* EJEMPLO LAYOUT GRID */
+
+/*agrego estilos a todos sus hijos*/
+.container2 > * {  
+  box-shadow: -1px 1px 7px 0px #73AD21;
+  border-radius: 13px;
+  padding:10px;
+  text-align:center;
+}
+.container2{ /*modo celular*/
+  display:grid;
+  background-color:grey; 
+  gap:10px;
+  /*defino las areas*/
+  grid-template: /*con sus altos pues el ancho es todad la pantalla*/
+    "header" 100px  
+    "navbar" 50px
+    "main" auto
+    "aside" 100px
+    "footer" 100px;
+}
+@media (min-width: 768px){ /*modo tablet*/
+  .container2{
+   /*  grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "aside main"
+    "footer footer"; */
+
+    grid-template: 
+    ". header" 100px
+    "navbar navbar" 50px
+    "aside main" auto
+    "footer footer" 100px /
+    200px    auto; /*aca abajo son medidas ancho de las columnas*/
+  }
+}
+@media (min-width: 992px){ /*modo escrtorio*/
+  .container2{
+    grid-template: 
+    ". header header" 100px
+    "navbar main aside" auto
+    "footer footer footer" 100px /
+    100px    auto  200px; /*aca abajo son medidas ancho de las columnas*/
+  }
+}
+.header{grid-area: header; background-color:rgb(75, 88, 75)}
+.navbar{grid-area: navbar; background-color:lightgreen}
+.aside{grid-area: aside; background-color:lightblue}
+.main{grid-area: main; background-color:lavender}
+.footer{grid-area: footer; background-color:rgba(4, 25, 67, 0)}
+
+/* EJEMPLO CARDS EN ROTATION */
+.bodyMyCards {
+  margin: 30px;
+  background-color: #E9E9E9;
+}
+
+div.polaroid {
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+
+div.rotate_left {
+  float: left;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+/* </style>
+</head>
+<body class="bodyMyCards">
+
+<div class="polaroid rotate_right">
+  <img src="pulpitrock.jpg" alt="Pulpit rock" width="284" height="213">
+  <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+</div>
+
+<div class="polaroid rotate_left">
+  <img src="cinqueterre.jpg" alt="Monterosso al Mare" width="284" height="213">
+  <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre, Italy.</p>
+</div>
+
+</body>
+</html> */
