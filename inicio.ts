@@ -22,18 +22,29 @@ async function init() {
 
     const port = process.env.PORT || 3003;
 
-    setTimeout(() => {
+  /*   setTimeout(() => { */
+        app.get('/',(_,response) => {response.send(`MENSAJE GET-`);});
     app.listen(() => {
-            console.log(`inicialiazando http://localhost: ${port}`);
+            console.log(`inicialiazando http://localhost:${port}`);
         });
-    }),5000;    
+    /* }),5000;  */   
 
-    await console.timeEnd("Midiendo");
+     console.timeEnd("Midiendo");
+
+    /*  if (!app.connection){
+         throw new Error("Mala coneccion")
+     }
+     return app; */
 }
-
-init()
-    .then(data => console.log(`sin Datos- ${data}`))
-    .catch((err) => {err.message = `le erro`});
+(async ()=> {
+    /* .then(data => console.log(`sin Datos- ${data}`))
+    .catch((err) => {err.message = `le erro`}); */
+    try {
+        const conn = await init()
+        console.log(`OK`);
+    } catch (error) {
+        console.log(`sin Datos- ${error}`)
+    }})();
 
 //#region invento
 /* 

@@ -4,7 +4,7 @@ const cors = require("cors");
 
 let datoADevolver=[ 'dato0','dato1','dato2','dato3'];
 
-async function init() {
+/* async function init() { */
     /*return new Promise < string > (( resolve, reject *) => {*/
     /*  resolve(datoADevolver); */
 
@@ -12,20 +12,20 @@ async function init() {
     app.use(cors());
 
     /* const port = 2002; */
-    const port = process.env.PORT || 3002;   
+    const port = process.env.PORT || 2002;
+    app.set ('port', process.env.PORT || port); 
 
-    if (datoADevolver.charAt(0).toLocaleUpperCase() == "A") {
-        console.log("rechazo a la A");
-        //reject(() => { console.log("rechazo a la A") });
-    }else{  setTimeout(() => {
-        app.listen((port, () => {
-            console.log(`listening mi APP on port http://localhost:${port}`);
-        }))
-    }, 2000);}
-
-    /*  }); */
-}
+    
+    app.get('/', (_, res) =>{
+        res.send('New mensaje');
+    })
+    
+    app.listen((port, () => {
+        console.log(`listening mi APP on port http://localhost:${port}`);
+    }))
+/* }
 
 init()
     .then(() => console.log(`Arranca bien`))
     .catch(err => console.log(`errores - ${err}`));
+ */

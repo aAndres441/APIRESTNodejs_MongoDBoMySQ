@@ -9,14 +9,38 @@
     <!-- have different stylesheets for different media
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
-    <link rel="stylesheet" type="tsxt/css" href="inicio.css">
+    <link rel="stylesheet" type="text/css" href="inicio.css">
+    <!-- Bootstrap CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
     <title>Node Express & Grid-Flex</title>
 </head>
 <body>
-    <h1>Inicio tabla</h1>
-    <table class="table table-responsive">
+      <nav class="navbar fixed-top navbar-expand-sm bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="#table">Table</a>
+          <a class="navbar-brand" href="#elem">Elements</a>
+          <a class="navbar-brand" href="#grid">Grid</a>
+          <a class="navbar-brand pushNav" href="#imgs">Imgs</a>
+        </div>
+      </nav> 
+
+  <div class="inicio" id="home">
+    <h1><span style='--content:"DevOps"; --endColor:yellow; --startColor:green'>DevOps</span></h1> 
+     <img src="images\logo3.jpg" alt="namaste"width="30"eight="30">    
+  </div>
+
+  <div class="navigation" >
+    <h1  style='--content:"INICIALIZE"'>INICIALIZE</span>  </h1>
+  </div>  
+      
+    <h2>Tabla</h2>
+    <table class="table table-responsive" id="table">
         <tr>
-            <th>ID</th>
+            <th style="color:red">ID</th>
             <th>json</th>
             <th>Name</th>
         </tr>
@@ -27,8 +51,8 @@
             <td>{{FinDeSemana.91}}</td>
         </tr>
     </table>
-    <h2> Centar elementos </h2>
-        <div class="container">    
+    <h2> Centrar elementos </h2>
+        <div class="container" id="elem">    
           <div class="center1">
             <div class="green"></div>
           </div>
@@ -45,42 +69,50 @@
             <div class="red"></div>
           </div>
         </div>
-        <h2> Hellow word </h2>
+        <h2> Text Overflow</h2>
         <p>Hover over the two divs below, to see the entire text.</p>
         <div class="test">This is some long text that will not fit in the box.
-          verflow property has the following values:
+          verflow property has  the following values:
           visible - Default. The overflow is not clipped. The content renders outside the element's box
           hidden - The overflow is clipped, and the rest of the content will be invisible
           scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
           auto - Similar to scroll, but it adds scrollbars only when necessary
         </div>
         <br>
-        <div class="container">
+        <div class="container" id="grid">
           <div class="green"></div>
           <div class="blue"></div>
           <div class="yellow"></div>
           <button class="btn btn-primary">Back</button>
         </div>
+        
         <div class="container2">
           <header class="header">header</header>
           <nav class="navbar navbar-right">navbar</nav>          
-          <main class="main">main</main>
-          <footer class="footer">footer</footer>
+          <main class="main">main
+              <!-- ej cards rotadas -->
+              <div class="bodyMyCards" id="imgs">
+                <div class="polaroid rotate_right">
+                  <a href="https://developer.mozilla.org/es/docs/Web/CSS/width"></a>
+                  <img src="images\Cosmico.jpg" alt="cosmic" >
+                  
+                  <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+                </div>          
+                <div class="polaroid rotate_left">
+                  <img src="images\paisajes.jpg" alt="paisajes">
+                  <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre, Italy.</p>
+                </div>          
+              </div>
+          </main>
+          <footer class="footer">footer
+           
+          </footer>
           <aside class="aside">aside 👻 </aside>
         </div>
 
-        <!-- ej cards rotadas -->
-        <div class="bodyMyCards">
-          <div class="polaroid rotate_right">
-            <img src="images\Cosmico.jpg" alt="cosmic" width="284" height="213">
-            <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
-          </div>          
-          <div class="polaroid rotate_left">
-            <img src="images\paisajes.jpg" alt="paisajes"  width="284" height="213">
-            <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre, Italy.</p>
-          </div>          
-        </div>
+       
 
+       
 
     <script src="inicio.ts"></script>
 </body>
